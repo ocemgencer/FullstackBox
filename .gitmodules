@@ -1,0 +1,63 @@
+[submodule "vagrant/puppet/modules/mongodb"]
+	path = vagrant/puppet/modules/mongodb
+	url = https://github.com/echocat/puppet-mongodb.git
+[submodule "vagrant/puppet/modules/postgresql"]
+	path = vagrant/puppet/modules/postgresql
+	url = https://github.com/puppetlabs/puppetlabs-postgresql
+[submodule "vagrant/puppet/modules/memcached"]
+	path = vagrant/puppet/modules/memcached
+	url = https://github.com/saz/puppet-memcached.git
+[submodule "vagrant/puppet/modules/python"]
+	path = vagrant/puppet/modules/python
+	url = https://github.com/voxpupuli/puppet-python
+[submodule "vagrant/puppet/modules/rabbitmq"]
+	path = vagrant/puppet/modules/rabbitmq
+	url = https://github.com/voxpupuli/puppet-rabbitmq
+[submodule "vagrant/puppet/modules/redis"]
+	path = vagrant/puppet/modules/redis
+	url = https://github.com/voxpupuli/puppet-redis.git
+[submodule "vagrant/puppet/modules/php"]
+	path = vagrant/puppet/modules/php
+	url = https://github.com/voxpupuli/puppet-php
+[submodule "vagrant/puppet/modules/nodejs"]
+	path = vagrant/puppet/modules/nodejs
+	url = https://github.com/voxpupuli/puppet-nodejs.git
+[submodule "vagrant/puppet/modules/gcc"]
+	path = vagrant/puppet/modules/gcc
+	url = https://github.com/puppetlabs/puppetlabs-gcc.git
+[submodule "vagrant/puppet/modules/ealstic"]
+	path = vagrant/puppet/modules/ealstic
+	url = https://github.com/elastic/puppet-elasticsearch.git
+[submodule "vagrant/puppet/modules/elastic"]
+	path = vagrant/puppet/modules/elastic
+	url = https://github.com/elastic/puppet-elasticsearch.git
+[submodule "vagrant/puppet/modules/nginx"]
+	path = vagrant/puppet/modules/nginx
+	url = https://github.com/voxpupuli/puppet-nginx.git
+[submodule "vagrant/puppet/modules/stdlib"]
+	path = vagrant/puppet/modules/stdlib
+	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
+[submodule "vagrant/puppet/modules/wget"]
+	path = vagrant/puppet/modules/wget
+	url = https://github.com/voxpupuli/puppet-wget.git
+[submodule "vagrant/puppet/modules/nodejs-nvm"]
+	path = vagrant/puppet/modules/nodejs-nvm
+	url = https://github.com/artberri/puppet-nvm.git
+[submodule "vagrant/puppet/modules/java"]
+	path = vagrant/puppet/modules/java
+	url = https://github.com/puppetlabs/puppetlabs-java.git
+[submodule "vagrant/puppet/modules/mariadb"]
+	path = vagrant/puppet/modules/mariadb
+	url = https://github.com/Mylezeem/puppet-mariadbrepo.git
+[submodule "vagrant/puppet/modules/mysql"]
+	path = vagrant/puppet/modules/mysql
+	url = https://github.com/puppetlabs/puppetlabs-mysql.git
+[submodule "vagrant/puppet/modules/puppet-mysql"]
+	path = vagrant/puppet/modules/puppet-mysql
+	url = https://github.com/rgevaert/puppet-mysql
+[submodule "vagrant/puppet/modules/mariadbrepo"]
+	path = vagrant/puppet/modules/mariadbrepo
+	url = https://github.com/Mylezeem/puppet-mariadbrepo.git
+[submodule "vagrant/puppet/modules/apt"]
+	path = vagrant/puppet/modules/apt
+	url = https://github.com/puppetlabs/puppetlabs-apt.git

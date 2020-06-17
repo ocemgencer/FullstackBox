@@ -1,0 +1,15 @@
+---
+:hierarchy:
+  - "%{environment}/%{calling_class}"
+  - "%{environment}"
+  - common
+:logger: 
+  console
+:backends:
+  - yaml
+  - puppet
+:yaml:
+  :datadir:
+    /vagrant/puppet/hieradata
+:merge_behavior: 
+  deeper
