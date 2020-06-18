@@ -1,16 +1,13 @@
-<h2>Vagrant and Puppet configuration for NodeJS, Redis & MongoDB</h2>
+<h2>Vagrant and Puppet configuration for various Fullstack projects</h2>
 
 Vagrant configuration with puppet to create a Virtual Box machine with 
-Ubuntu Server 14.04, Nodejs / Redis / MongoDB
-
-
-
+Ubuntu Server Xenial, Nginx, Node.js, MongoDB, PostGreSql, MariaDB, PHP7, Python
 
 **installation:**
 
 * Install Vagrant
 * Install Virtual
-* Clone the repository git clone [git://github.com/joaquimserafim/vagrant-nodejs-redis-mongodb.git](git://github.com/joaquimserafim/vagrant-nodejs-redis-mongodb.git)
+* Clone the repository git clone [git://github.com/joaquimserafim/vagrant-nodejs-redis-mongodb.git](git://github.com/cgencer/vagrant.git)
 
 
 **running:**
@@ -20,15 +17,12 @@ Ubuntu Server 14.04, Nodejs / Redis / MongoDB
 * Halt - vagrant halt<br>
 
 
-
-
 **access mongo and redis from your machine:**
 
 * redis.cli h localhost -p 6379
 * mongo localhost 27017
 
 *attention: you may have this ports occupied by your installations for redis and mongodb in your machine*
-
 
 
 **development:**
@@ -40,14 +34,14 @@ by default this vagrantfile have this configuration for shared folder between th
 
 **Puppet Manifest will install:**
 
-* [n](https://github.com/visionmedia/n) a node.js version management
+* MariaDB 10
+* Nginx - last stable release
 * Redis - last stable release
-* MongoDB - 2.6.\*
+* MongoDB
 * wget
 * git
 * vim htop
 * g++
-
 
 
 Good hacking!!!!!!!!
