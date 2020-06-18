@@ -42,6 +42,6 @@ by default this vagrantfile have this configuration for shared folder between th
 * git
 * vim htop
 * g++
-
+and others will follow...
 
 Good hacking!!!!!!!!
