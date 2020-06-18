@@ -32,16 +32,7 @@ class othertools {
     }
 }
 
-class mariadb {
-    package { 'mariadb-server':
-        ensure => installed,
-    }
-    service { 'mysql':
-        ensure => running,
-        enable => true,
-    }
-}
-
 include apt_update
-include mariadb
-# include '::mysql::server'
+include mysql
+include nginx
+# include postgresql

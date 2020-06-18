@@ -3,7 +3,7 @@
 	url = https://github.com/echocat/puppet-mongodb.git
 [submodule "vagrant/puppet/modules/postgresql"]
 	path = vagrant/puppet/modules/postgresql
-	url = https://github.com/puppetlabs/puppetlabs-postgresql
+	url = https://github.com/akumria/puppet-postgresql.git
 [submodule "vagrant/puppet/modules/memcached"]
 	path = vagrant/puppet/modules/memcached
 	url = https://github.com/saz/puppet-memcached.git
@@ -61,3 +61,6 @@
 [submodule "vagrant/puppet/modules/apt"]
 	path = vagrant/puppet/modules/apt
 	url = https://github.com/puppetlabs/puppetlabs-apt.git
+[submodule "vagrant/puppet/custom/nginx/files/cms"]
+	path = vagrant/puppet/custom/nginx/files/cms
+	url = https://github.com/elasticweb/nginx-configs.git

@@ -45,7 +45,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :puppet do |puppet|
     # puppet.hiera_config_path        = "vagrant/puppet/hiera.yaml"
     puppet.manifests_path           = "vagrant/puppet/manifests"
-    puppet.module_path              = ["vagrant/puppet/modules"]
+    puppet.module_path              = ["vagrant/puppet/modules", "vagrant/puppet/custom"]
     puppet.manifest_file            = "main.pp"
     puppet.options                  = [
                                         '--verbose',
