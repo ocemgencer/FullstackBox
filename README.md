@@ -7,7 +7,7 @@ Ubuntu Server Xenial, Nginx, Node.js, MongoDB, PostGreSql, MariaDB, PHP7, Python
 
 * Install Vagrant
 * Install Virtual
-* Clone the repository git clone [git://github.com/joaquimserafim/vagrant-nodejs-redis-mongodb.git](git://github.com/cgencer/vagrant.git)
+* Clone the repository git clone [git://github.com/cgencer/Fullstackbox.git](git://github.com/cgencer/FullstackBox.git)
 
 
 **running:**
