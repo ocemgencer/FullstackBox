@@ -1,4 +1,4 @@
-class mysql () {
+class mariadb () {
 
   exec { "aptGetRepos":
     command => "sudo curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash",
@@ -16,10 +16,10 @@ class mysql () {
     group  => 'root',
     mode   => '0644',
     source => 'puppet:///modules/mysql/mysql_secure_installation.sql',
-    before => Exec['aptGetMaria'],
+    require => Exec['aptGetMaria'],
   }
 
-  exec { 'mysql_secure_installation':
+  exec { 'secure_mariadb':
     path    => '/usr/bin:/usr/sbin:/bin',
     command => 'mysql -sfu root < /tmp/mysql_secure_installation.sql',
     unless  => 'mysql -uroot -ppass',

@@ -10,7 +10,7 @@ class apt_update {
     }
 
    exec { "puppetInstall":
-        command => "aptitude install -y puppet",
+        command => "sudo apt install -y --assume-yes --force-yes puppet",
         path => ["/bin", "/usr/bin"],
         require => Exec["dpkgUpdate"]
     }
@@ -58,6 +58,6 @@ class othertools {
 include apt_update
 include othertools
 include stdlib
-include mysql
+include mariadb
 # include nginx
 # include postgresql
