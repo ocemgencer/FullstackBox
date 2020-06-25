@@ -1,0 +1,5 @@
+  file { '/etc/my.cnf':
+
+    content => epp('typo3/my.cnf.epp', {'mariadb_root_password' => $mariadb_root_password}),
+
+
