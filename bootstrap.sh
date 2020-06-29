@@ -11,9 +11,4 @@ sudo apt-get update -y
 sudo apt upgrade -y
 
 
-sudo mysql -uroot
-
-ALTER USER root@localhost IDENTIFIED VIA unix_socket;
-ALTER USER root@localhost IDENTIFIED VIA mysql_native_password;
-SET PASSWORD = PASSWORD('gudubet');
-flush privileges;
+echo "USE mysql;ALTER USER root@localhost IDENTIFIED VIA unix_socket;ALTER USER root@localhost IDENTIFIED VIA mysql_native_password;SET PASSWORD = PASSWORD('pass');" | sudo mysql -uroot

@@ -1,0 +1,4 @@
+echo "USE mysql; \
+ALTER USER root@localhost IDENTIFIED VIA unix_socket; \
+ALTER USER root@localhost IDENTIFIED VIA mysql_native_password; \
+SET PASSWORD = PASSWORD('pass');" | sudo mysql -uroot

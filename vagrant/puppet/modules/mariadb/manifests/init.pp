@@ -10,19 +10,18 @@ class mariadb () {
     path => ["/bin", "/usr/bin"],
   }
 
-  file { '/tmp/mysql_secure_installation.sql':
+  file { '/tmp/secure_mariadb.sql':
     ensure => file,
     owner  => 'root',
     group  => 'root',
     mode   => '0644',
-    source => 'puppet:///modules/mysql/mysql_secure_installation.sql',
+    source => 'puppet:///modules/mariadb/secure_mariadb.sql',
     require => Exec['aptGetMaria'],
   }
 
   exec { 'secure_mariadb':
-    path    => '/usr/bin:/usr/sbin:/bin',
-    command => 'mysql -sfu root < /tmp/mysql_secure_installation.sql',
-    unless  => 'mysql -uroot -ppass',
-    require => File['/tmp/mysql_secure_installation.sql'],
+    command => template('mariadb/securedb.erb'),
+    path => ["/bin", "/usr/bin"],
+    logoutput => true
   }
 }
