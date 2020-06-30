@@ -8,15 +8,7 @@ class mariadb () {
   exec { "aptGetMaria":
     command => "sudo apt install -y --assume-yes --force-yes mariadb-server galera-4 mariadb-client libmariadb3 mariadb-backup mariadb-common",
     path => ["/bin", "/usr/bin"],
-  }
-
-  file { '/tmp/secure_mariadb.sql':
-    ensure => file,
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0644',
-    source => 'puppet:///modules/mariadb/secure_mariadb.sql',
-    require => Exec['aptGetMaria'],
+    creates => '/usr/bin/mariadb'
   }
 
   exec { 'secure_mariadb':
