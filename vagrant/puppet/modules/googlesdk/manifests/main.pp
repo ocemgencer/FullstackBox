@@ -1,31 +1,18 @@
 class apt_update {
-    exec { "wget":
-        command => "wget https://apt.puppetlabs.com/puppet6-release-xenial.deb",
+    exec { "GoogleSDKKeyring":
+        command => 'echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list',
         path => ["/bin", "/usr/bin"],
-        creates => '/home/vagrant/puppet6-release-xenial.deb'
+        creates => '/etc/apt/sources.list.d/google-cloud-sdk.list'
     }
 
-    exec { "dpkgUpdate":
-        command => "sudo dpkg -i puppet6-release-xenial.deb",
-        path => ["/bin", "/usr/bin"]
+    exec { "GoogleSDKAptKey":
+        command => 'curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -',
+        path => ["/bin", "/usr/bin"],
     }
 
-    exec { "puppetInstall":
-        command => "sudo apt install -y --assume-yes --force-yes puppet",
+    exec { "GoogleSDKInstall":
+        command => 'sudo apt-get install google-cloud-sdk',
         path => ["/bin", "/usr/bin"],
-        require => Exec["dpkgUpdate"],
-        creates => '/usr/bin/puppet'
-    }
-
-    exec { "aptGetHTTPSTrans":
-        command => "sudo apt-get install -y apt-transport-https",
-        path => ["/bin", "/usr/bin"],
-        require => Exec["puppetInstall"]
-    }
-
-    exec { "aptUpdate":
-        command => "sudo apt update -y",
-        path => ["/bin", "/usr/bin"],
-        require => Exec["aptGetHTTPSTrans"]
+        creates => '/usr/bin/gcloud'
     }
 }
